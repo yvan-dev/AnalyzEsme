@@ -16,14 +16,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.analyz.esme.dao.RepartitionDao;
 import com.analyz.esme.model.Repartition;
-import com.google.gson.Gson;
-import com.google.gson.JsonArray;
 import com.google.gson.JsonSyntaxException;
 
-import okhttp3.MediaType;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
-import okhttp3.RequestBody;
 import okhttp3.Response;
 
 @RestController
@@ -44,13 +40,8 @@ public class StoreData {
     }
 
     public ArrayList<Repartition> parseData() throws JsonSyntaxException, IOException {
-        ArrayList<Repartition> repartitions = new ArrayList<Repartition>();
-        Response data = getData();
-        String responseString = data.body().string();
-        String city = new JSONObject(responseString).getJSONObject("Zone").getJSONObject("Millesime")
-                .getString("Nccenr");
-
-        JSONArray cellules = new JSONObject(responseString).getJSONArray("Cellule");
+        ArrayList<Repartition> repartitions = repartitionDao.findAll();
+        String[] cityCodes = { "FE-1", "COM-75056", "COM-13055", "COM-33063", "COM-59350" };
         Map<String, String> sexes = new HashMap<>();
         Map<String, String> ages = new HashMap<>();
         // Sexes
@@ -67,27 +58,36 @@ public class StoreData {
         ages.put("75", "75 ans à 89 ans");
         ages.put("90", "90 ans et plus");
 
-        for (int i = 0; i < cellules.length(); i++) {
-            Repartition repartition = new Repartition();
-            JSONArray modalites = cellules.getJSONObject(i).getJSONArray("Modalite");
-            // repartition.setId(i + 1);
-            repartition.setCity(city);
-            repartition.setSexe(sexes.get(modalites.getJSONObject(0).getString("@code")));
-            repartition.setAge(ages.get(modalites.getJSONObject(1).getString("@code")));
-            repartition.setValue(Float.parseFloat(cellules.getJSONObject(i).getString("Valeur")));
-            repartitions.add(repartition);
+        for (String cityCode : cityCodes) {
+            Response data = getData(cityCode);
+            String responseString = data.body().string();
+            String city = new JSONObject(responseString).getJSONObject("Zone").getJSONObject("Millesime")
+                    .getString("Nccenr");
+            JSONArray cellules = new JSONObject(responseString).getJSONArray("Cellule");
+
+            for (int i = 0; i < cellules.length(); i++) {
+                Repartition repartition = new Repartition();
+                JSONArray modalites = cellules.getJSONObject(i).getJSONArray("Modalite");
+                repartition.setCity(city);
+                repartition.setSexe(sexes.get(modalites.getJSONObject(0).getString("@code")));
+                repartition.setAge(ages.get(modalites.getJSONObject(1).getString("@code")));
+                repartition.setValue(Float.parseFloat(cellules.getJSONObject(i).getString("Valeur")));
+                if (!checkIfExist(repartitions, repartition))
+                    repartitions.add(repartition);
+                else System.out.println("Already exists");
+            }
         }
         return repartitions;
     }
 
-
-    public Response getData() {
+    public Response getData(String cityCode) {
         Response response = null;
         try {
             OkHttpClient client = new OkHttpClient();
 
             Request request = new Request.Builder()
-                    .url("https://api.insee.fr/donnees-locales/V0.1/donnees/geo-SEXE-AGE15_15_90@GEO2022RP2019/COM-75056.all.all")
+                    .url("https://api.insee.fr/donnees-locales/V0.1/donnees/geo-SEXE-AGE15_15_90@GEO2022RP2019/"
+                            + cityCode + ".all.all")
                     .header("Accept", "application/json")
                     .header("Authorization", "Bearer 57c363eb-c650-34cb-9cc0-b18b0e1e0af1")
                     .build();
@@ -95,7 +95,6 @@ public class StoreData {
             response = client.newCall(request).execute();
 
             if (response.isSuccessful()) {
-                // System.out.println(response.body().string());
                 return response;
             } else {
                 System.out.println("Error: " + response.code() + " " + response.message());
@@ -105,5 +104,16 @@ public class StoreData {
             System.out.println("Error: " + e.getMessage());
         }
         return null;
+    }
+
+    public boolean checkIfExist(ArrayList<Repartition> repartitions, Repartition repartition) {
+        for (Repartition rep : repartitions) {
+            if (rep.getCity() == null || rep.getAge() == null || rep.getSexe() == null)
+                continue;
+            if (rep.getCity().equals(repartition.getCity()) && rep.getAge().equals(repartition.getAge())
+                    && rep.getSexe().equals(repartition.getSexe()))
+                return true;
+        }
+        return false;
     }
 }
