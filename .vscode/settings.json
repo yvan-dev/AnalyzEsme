@@ -1,0 +1,5 @@
+{
+	"java.compile.nullAnalysis.mode": "automatic",
+	"java.configuration.updateBuildConfiguration": "automatic",
+	"marquee.widgets.npm-stats.packageNames": ["my-app"]
+}

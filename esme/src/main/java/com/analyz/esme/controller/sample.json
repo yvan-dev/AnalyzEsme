@@ -1,0 +1,599 @@
+{
+    "Croisement": {
+        "Filtre": "",
+        "Groupe": {
+            "@code": "FHM",
+            "$": "France hors Mayotte"
+        },
+        "JeuDonnees": {
+            "@code": "GEO2022RP2019",
+            "Annee": "2019",
+            "Libelle": "Recensement de la population 2019",
+            "Source": "Recensement de la population"
+        }
+    },
+    "Zone": {
+        "@codgeo": "75056",
+        "@nivgeo": "COM",
+        "Millesime": {
+            "@annee": "2022",
+            "Nccenr": "Paris",
+            "Tncc": "0"
+        }
+    },
+    "Variable": [
+        {
+            "@code": "SEXE",
+            "Libelle": "Sexe",
+            "Modalite": [
+                {
+                    "@code": "ENS",
+                    "@variable": "",
+                    "Libelle": "Ensemble"
+                },
+                {
+                    "@code": "1",
+                    "@variable": "",
+                    "Libelle": "Hommes"
+                },
+                {
+                    "@code": "2",
+                    "@variable": "",
+                    "Libelle": "Femmes"
+                }
+            ]
+        },
+        {
+            "@code": "AGE15_15_90",
+            "Libelle": "",
+            "Modalite": [
+                {
+                    "@code": "ENS",
+                    "@variable": "",
+                    "Libelle": "Ensemble"
+                },
+                {
+                    "@code": "00",
+                    "@variable": "",
+                    "Libelle": "0 à 14 ans"
+                },
+                {
+                    "@code": "15",
+                    "@variable": "",
+                    "Libelle": "15 à 29 ans"
+                },
+                {
+                    "@code": "30",
+                    "@variable": "",
+                    "Libelle": "30 à 44 ans"
+                },
+                {
+                    "@code": "45",
+                    "@variable": "",
+                    "Libelle": "45 à 59 ans"
+                },
+                {
+                    "@code": "60",
+                    "@variable": "",
+                    "Libelle": "60 à 74 ans"
+                },
+                {
+                    "@code": "75",
+                    "@variable": "",
+                    "Libelle": "75 à 89 ans"
+                },
+                {
+                    "@code": "90",
+                    "@variable": "",
+                    "Libelle": "90 ans ou plus"
+                }
+            ]
+        }
+    ],
+    "Cellule": [
+        {
+            "Zone": {
+                "@codgeo": "75056",
+                "@nivgeo": "COM"
+            },
+            "Mesure": {
+                "@code": "POP",
+                "$": "Population"
+            },
+            "Modalite": [
+                {
+                    "@code": "ENS",
+                    "@variable": "SEXE"
+                },
+                {
+                    "@code": "ENS",
+                    "@variable": "AGE15_15_90"
+                }
+            ],
+            "Valeur": "2165423"
+        },
+        {
+            "Zone": {
+                "@codgeo": "75056",
+                "@nivgeo": "COM"
+            },
+            "Mesure": {
+                "@code": "POP",
+                "$": "Population"
+            },
+            "Modalite": [
+                {
+                    "@code": "1",
+                    "@variable": "SEXE"
+                },
+                {
+                    "@code": "ENS",
+                    "@variable": "AGE15_15_90"
+                }
+            ],
+            "Valeur": "1018951.786725"
+        },
+        {
+            "Zone": {
+                "@codgeo": "75056",
+                "@nivgeo": "COM"
+            },
+            "Mesure": {
+                "@code": "POP",
+                "$": "Population"
+            },
+            "Modalite": [
+                {
+                    "@code": "2",
+                    "@variable": "SEXE"
+                },
+                {
+                    "@code": "ENS",
+                    "@variable": "AGE15_15_90"
+                }
+            ],
+            "Valeur": "1146471.213275"
+        },
+        {
+            "Zone": {
+                "@codgeo": "75056",
+                "@nivgeo": "COM"
+            },
+            "Mesure": {
+                "@code": "POP",
+                "$": "Population"
+            },
+            "Modalite": [
+                {
+                    "@code": "ENS",
+                    "@variable": "SEXE"
+                },
+                {
+                    "@code": "00",
+                    "@variable": "AGE15_15_90"
+                }
+            ],
+            "Valeur": "294158.809047"
+        },
+        {
+            "Zone": {
+                "@codgeo": "75056",
+                "@nivgeo": "COM"
+            },
+            "Mesure": {
+                "@code": "POP",
+                "$": "Population"
+            },
+            "Modalite": [
+                {
+                    "@code": "1",
+                    "@variable": "SEXE"
+                },
+                {
+                    "@code": "00",
+                    "@variable": "AGE15_15_90"
+                }
+            ],
+            "Valeur": "149415.42271"
+        },
+        {
+            "Zone": {
+                "@codgeo": "75056",
+                "@nivgeo": "COM"
+            },
+            "Mesure": {
+                "@code": "POP",
+                "$": "Population"
+            },
+            "Modalite": [
+                {
+                    "@code": "2",
+                    "@variable": "SEXE"
+                },
+                {
+                    "@code": "00",
+                    "@variable": "AGE15_15_90"
+                }
+            ],
+            "Valeur": "144743.386337"
+        },
+        {
+            "Zone": {
+                "@codgeo": "75056",
+                "@nivgeo": "COM"
+            },
+            "Mesure": {
+                "@code": "POP",
+                "$": "Population"
+            },
+            "Modalite": [
+                {
+                    "@code": "ENS",
+                    "@variable": "SEXE"
+                },
+                {
+                    "@code": "15",
+                    "@variable": "AGE15_15_90"
+                }
+            ],
+            "Valeur": "515364.0446"
+        },
+        {
+            "Zone": {
+                "@codgeo": "75056",
+                "@nivgeo": "COM"
+            },
+            "Mesure": {
+                "@code": "POP",
+                "$": "Population"
+            },
+            "Modalite": [
+                {
+                    "@code": "1",
+                    "@variable": "SEXE"
+                },
+                {
+                    "@code": "15",
+                    "@variable": "AGE15_15_90"
+                }
+            ],
+            "Valeur": "239893.84583"
+        },
+        {
+            "Zone": {
+                "@codgeo": "75056",
+                "@nivgeo": "COM"
+            },
+            "Mesure": {
+                "@code": "POP",
+                "$": "Population"
+            },
+            "Modalite": [
+                {
+                    "@code": "2",
+                    "@variable": "SEXE"
+                },
+                {
+                    "@code": "15",
+                    "@variable": "AGE15_15_90"
+                }
+            ],
+            "Valeur": "275470.198769"
+        },
+        {
+            "Zone": {
+                "@codgeo": "75056",
+                "@nivgeo": "COM"
+            },
+            "Mesure": {
+                "@code": "POP",
+                "$": "Population"
+            },
+            "Modalite": [
+                {
+                    "@code": "ENS",
+                    "@variable": "SEXE"
+                },
+                {
+                    "@code": "30",
+                    "@variable": "AGE15_15_90"
+                }
+            ],
+            "Valeur": "475117.922319"
+        },
+        {
+            "Zone": {
+                "@codgeo": "75056",
+                "@nivgeo": "COM"
+            },
+            "Mesure": {
+                "@code": "POP",
+                "$": "Population"
+            },
+            "Modalite": [
+                {
+                    "@code": "1",
+                    "@variable": "SEXE"
+                },
+                {
+                    "@code": "30",
+                    "@variable": "AGE15_15_90"
+                }
+            ],
+            "Valeur": "234526.385501"
+        },
+        {
+            "Zone": {
+                "@codgeo": "75056",
+                "@nivgeo": "COM"
+            },
+            "Mesure": {
+                "@code": "POP",
+                "$": "Population"
+            },
+            "Modalite": [
+                {
+                    "@code": "2",
+                    "@variable": "SEXE"
+                },
+                {
+                    "@code": "30",
+                    "@variable": "AGE15_15_90"
+                }
+            ],
+            "Valeur": "240591.536819"
+        },
+        {
+            "Zone": {
+                "@codgeo": "75056",
+                "@nivgeo": "COM"
+            },
+            "Mesure": {
+                "@code": "POP",
+                "$": "Population"
+            },
+            "Modalite": [
+                {
+                    "@code": "ENS",
+                    "@variable": "SEXE"
+                },
+                {
+                    "@code": "45",
+                    "@variable": "AGE15_15_90"
+                }
+            ],
+            "Valeur": "400825.381139"
+        },
+        {
+            "Zone": {
+                "@codgeo": "75056",
+                "@nivgeo": "COM"
+            },
+            "Mesure": {
+                "@code": "POP",
+                "$": "Population"
+            },
+            "Modalite": [
+                {
+                    "@code": "1",
+                    "@variable": "SEXE"
+                },
+                {
+                    "@code": "45",
+                    "@variable": "AGE15_15_90"
+                }
+            ],
+            "Valeur": "192749.171061"
+        },
+        {
+            "Zone": {
+                "@codgeo": "75056",
+                "@nivgeo": "COM"
+            },
+            "Mesure": {
+                "@code": "POP",
+                "$": "Population"
+            },
+            "Modalite": [
+                {
+                    "@code": "2",
+                    "@variable": "SEXE"
+                },
+                {
+                    "@code": "45",
+                    "@variable": "AGE15_15_90"
+                }
+            ],
+            "Valeur": "208076.210078"
+        },
+        {
+            "Zone": {
+                "@codgeo": "75056",
+                "@nivgeo": "COM"
+            },
+            "Mesure": {
+                "@code": "POP",
+                "$": "Population"
+            },
+            "Modalite": [
+                {
+                    "@code": "ENS",
+                    "@variable": "SEXE"
+                },
+                {
+                    "@code": "60",
+                    "@variable": "AGE15_15_90"
+                }
+            ],
+            "Valeur": "309791.941452"
+        },
+        {
+            "Zone": {
+                "@codgeo": "75056",
+                "@nivgeo": "COM"
+            },
+            "Mesure": {
+                "@code": "POP",
+                "$": "Population"
+            },
+            "Modalite": [
+                {
+                    "@code": "1",
+                    "@variable": "SEXE"
+                },
+                {
+                    "@code": "60",
+                    "@variable": "AGE15_15_90"
+                }
+            ],
+            "Valeur": "138462.555163"
+        },
+        {
+            "Zone": {
+                "@codgeo": "75056",
+                "@nivgeo": "COM"
+            },
+            "Mesure": {
+                "@code": "POP",
+                "$": "Population"
+            },
+            "Modalite": [
+                {
+                    "@code": "2",
+                    "@variable": "SEXE"
+                },
+                {
+                    "@code": "60",
+                    "@variable": "AGE15_15_90"
+                }
+            ],
+            "Valeur": "171329.386289"
+        },
+        {
+            "Zone": {
+                "@codgeo": "75056",
+                "@nivgeo": "COM"
+            },
+            "Mesure": {
+                "@code": "POP",
+                "$": "Population"
+            },
+            "Modalite": [
+                {
+                    "@code": "ENS",
+                    "@variable": "SEXE"
+                },
+                {
+                    "@code": "75",
+                    "@variable": "AGE15_15_90"
+                }
+            ],
+            "Valeur": "144907.40347"
+        },
+        {
+            "Zone": {
+                "@codgeo": "75056",
+                "@nivgeo": "COM"
+            },
+            "Mesure": {
+                "@code": "POP",
+                "$": "Population"
+            },
+            "Modalite": [
+                {
+                    "@code": "1",
+                    "@variable": "SEXE"
+                },
+                {
+                    "@code": "75",
+                    "@variable": "AGE15_15_90"
+                }
+            ],
+            "Valeur": "57172.462893"
+        },
+        {
+            "Zone": {
+                "@codgeo": "75056",
+                "@nivgeo": "COM"
+            },
+            "Mesure": {
+                "@code": "POP",
+                "$": "Population"
+            },
+            "Modalite": [
+                {
+                    "@code": "2",
+                    "@variable": "SEXE"
+                },
+                {
+                    "@code": "75",
+                    "@variable": "AGE15_15_90"
+                }
+            ],
+            "Valeur": "87734.940576"
+        },
+        {
+            "Zone": {
+                "@codgeo": "75056",
+                "@nivgeo": "COM"
+            },
+            "Mesure": {
+                "@code": "POP",
+                "$": "Population"
+            },
+            "Modalite": [
+                {
+                    "@code": "ENS",
+                    "@variable": "SEXE"
+                },
+                {
+                    "@code": "90",
+                    "@variable": "AGE15_15_90"
+                }
+            ],
+            "Valeur": "25257.497974"
+        },
+        {
+            "Zone": {
+                "@codgeo": "75056",
+                "@nivgeo": "COM"
+            },
+            "Mesure": {
+                "@code": "POP",
+                "$": "Population"
+            },
+            "Modalite": [
+                {
+                    "@code": "1",
+                    "@variable": "SEXE"
+                },
+                {
+                    "@code": "90",
+                    "@variable": "AGE15_15_90"
+                }
+            ],
+            "Valeur": "6731.943567"
+        },
+        {
+            "Zone": {
+                "@codgeo": "75056",
+                "@nivgeo": "COM"
+            },
+            "Mesure": {
+                "@code": "POP",
+                "$": "Population"
+            },
+            "Modalite": [
+                {
+                    "@code": "2",
+                    "@variable": "SEXE"
+                },
+                {
+                    "@code": "90",
+                    "@variable": "AGE15_15_90"
+                }
+            ],
+            "Valeur": "18525.554407"
+        }
+    ]
+}

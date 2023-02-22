@@ -1,0 +1,14 @@
+{
+	"configurations": [
+		{
+			"type": "java",
+			"name": "Spring Boot-EsmeApplication<esme>",
+			"request": "launch",
+			"cwd": "${workspaceFolder}",
+			"mainClass": "com.analyz.esme.EsmeApplication",
+			"projectName": "esme",
+			"args": "",
+			"envFile": "${workspaceFolder}/.env"
+		}
+	]
+}
